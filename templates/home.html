@@ -1,0 +1,10 @@
+{%extends 'base.html'%}
+{%block content %}
+    {% for doc in dec %}
+        {% for key, value in doc.items() %}
+            <div>{{ key }} | {{ value }}</div>
+        {% endfor %}
+        <hr>
+    {% endfor %}
+
+{%endblock%}

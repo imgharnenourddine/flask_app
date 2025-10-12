@@ -1,0 +1,40 @@
+{%extends 'base.html'%}
+{%block content %}
+<form action="" method="POST">
+<fieldset>
+    {{form.hidden_tag()}}
+    <h1>create un compte</h1>
+    <div>
+        {{form.lname.label()}}
+        {{form.lname()}}
+    </div>
+    <div>
+        {{form.fname.label()}}
+        {{form.fname()}}
+    </div>
+    <div>
+        {{form.email.label()}}
+        {{form.email()}}
+    </div>
+    <div>
+        {{form.password.label()}}
+        {{form.password()}}
+    </div>
+    <div>
+        {{form.confirm_password.label()}}
+        {{form.confirm_password()}}
+    </div>
+     <div>
+        
+        {{form.submit()}}
+    </div>
+    <div>
+        <h5>already have acount ?</h5>
+        <a href="{{url_for('login')}}">sign in </a>
+    </div>
+</fieldset>
+
+
+</form>
+
+{%endblock%}

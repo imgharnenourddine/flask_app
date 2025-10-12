@@ -1,0 +1,30 @@
+{%extends 'base.html'%}
+{%block content %}
+<form action="" method="POST">
+<fieldset>
+    {{form.hidden_tag()}}
+    <h1>connecter au compte</h1>
+    
+    <div>
+        {{form.email.label()}}
+        {{form.email()}}
+    </div>
+    <div>
+        {{form.password.label()}}
+        {{form.password()}}
+    </div>
+    <div>
+        {{form.remembre.label()}}
+        {{form.remembre()}}
+    </div>
+     <div>
+        
+        {{form.submit()}}
+    </div>
+    
+</fieldset>
+
+
+</form>
+
+{%endblock%}

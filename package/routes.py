@@ -1,7 +1,6 @@
-from flask import Flask,render_template,url_for,redirect,flash
+from package import app
+from flask import render_template,url_for,redirect,flash
 from forms import registreform,loginfrom
-app=Flask(__name__)
-app.config['SECRET_KEY']='e861d5ca3a8eee5ac533994b07c0f983c6cdb33ba3fc6eccb09c12a683b8ac36'
 @app.route("/")
 @app.route("/home")
 def home ():
@@ -30,5 +29,3 @@ def login ():
             return redirect(url_for('login'))
         
     return render_template('login.html',form=form)
-if __name__=="__main__" :
-    app.run(debug=True)
